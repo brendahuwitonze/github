@@ -1,0 +1,10 @@
+<p><img src="{{user.avatar_url}}" alt=""></p>
+<p>{{user.name}}</p>
+<p>{{user.login}}</p>
+<p>{{user.followers}}</p>
+<p>{{user.following}}</p>
+<p>{{user.public_repos}}</p>
+
+<div *ngFor='let users of user;let i = index'>
+        <p> {{users.user}}</p>
+</div>
