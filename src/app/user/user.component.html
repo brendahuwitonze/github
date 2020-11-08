@@ -1,10 +1,19 @@
-<p><img src="{{user.avatar_url}}" alt=""></p>
-<p>{{user.name}}</p>
-<p>{{user.login}}</p>
-<p>{{user.followers}}</p>
-<p>{{user.following}}</p>
-<p>{{user.public_repos}}</p>
-
-<div *ngFor='let users of user;let i = index'>
-        <p> {{users.user}}</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <app-form (emittextsearch)="usersearch($event)"></app-form>
+            <img src="{{user.avatar_url}}" alt="">
+            <p>Name: {{user.name}}</p>
+        </div>
+        <div class="col-md-6">
+            <div class="card m-2">
+                <div class="card-title">
+                    <p>Username: {{user.login}}</p>
+                    <p>Followers: {{user.followers}}</p>
+                    <p>Followering:{{user.following}}</p>
+                    <p>Repo_number:{{user.public_repos}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

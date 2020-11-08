@@ -16,7 +16,7 @@ export class GitinfoRequestService {
   }
   userRequest(textsearch:string){
     interface ApiResponse{
-      image:string;
+      avatar_url:string;
       name:string;
       login:string;
       public_repos:number
@@ -24,8 +24,8 @@ export class GitinfoRequestService {
       following:number;
     }
     let promise = new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>('https://api.github.com/users/'+textsearch+'/repos?access_token='+environment.apiUrl).toPromise().then(response=>{
-        this.user.avatar_url = response.image
+      this.http.get<ApiResponse>('https://api.github.com/users/'+textsearch+'?access_token='+environment.apiKey).toPromise().then(response=>{
+        this.user.avatar_url = response.avatar_url
         this.user.name =response.name
         this.user.login=response.login
         this.user. public_repos = response. public_repos
@@ -52,7 +52,7 @@ export class GitinfoRequestService {
       description:string;
   }
   let promise = new Promise((resolve,reject)=>{
-    this.http.get<ApiResponse>('https://api.github.com/users/'+textsearch+'?access_token='+environment.apiUrl).toPromise().then(response=>{
+    this.http.get<ApiResponse>('https://api.github.com/users/'+textsearch+'/repos_url"?access_token='+environment.apiKey).toPromise().then(response=>{
       this.repository.id = response.id
       this.repository.name = response. name
       this.repository.html_url=response.html_url

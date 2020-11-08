@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user';
 import { GitinfoRequestService } from '../gitinfo-http/gitinfo-request.service';
@@ -11,7 +12,6 @@ import { GitinfoRequestService } from '../gitinfo-http/gitinfo-request.service';
 })
 export class UserComponent implements OnInit {
  user:User;
- 
   constructor(private userService:GitinfoRequestService ) { }
   usersearch(textsearch){
     this.userService.userRequest(textsearch).then(
