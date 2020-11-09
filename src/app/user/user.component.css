@@ -3,3 +3,17 @@
     border-radius: 50%;
     height: 100px;
   } 
+
+  .card{
+    width: 320px;
+    padding: 20px;
+    background-color: rgba(245, 241, 237, 0.377);
+  }
+  .bren{
+    font-size: 30px;
+  }  
+
+
+.card-title > p{
+  font-size: 18px;
+}

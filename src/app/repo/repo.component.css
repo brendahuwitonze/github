@@ -1,0 +1,10 @@
+
+  .card{
+    width: 320px;
+    padding: 20px;
+    background-color: rgba(245, 241, 237, 0.377);
+  }
+  
+.card-title > p{
+  font-size: 18px;
+}

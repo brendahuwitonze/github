@@ -1,2 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+body{
+    background-image: url(https://res.cloudinary.com/dk7srqvca/image/upload/v1604865481/Screenshot_from_2020-11-08_21-46-08_mkpeni.png); 
+    background-repeat: no-repeat;
+    background-size: 100% ; 
+    background-repeat: no-repeat;
+    background-position: cover;
+
+    
+}

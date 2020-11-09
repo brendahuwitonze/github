@@ -3,11 +3,11 @@
         <div class="col-md-6">
             <app-form (emittextsearch)="usersearch($event)"></app-form>
             <img src="{{user.avatar_url}}" alt="">
-            <p>Name: {{user.name}}</p>
+            <p class="bren">Name: {{user.name}}</p>
         </div>
         <div class="col-md-6">
             <div class="card m-2">
-                <div class="card-title">
+                <div class="card-title mb-2">
                     <p>Username: {{user.login}}</p>
                     <p>Followers: {{user.followers}}</p>
                     <p>Followering:{{user.following}}</p>
