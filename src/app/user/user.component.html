@@ -3,15 +3,15 @@
         <div class="row">
         <div class="col-md-6"> 
             <img src="{{user.avatar_url}}" alt="">
-            <p class="bren">Name: {{user.name}}</p>
+            <p  appStrikethrough class="bren">Name: {{user.name}}</p>
         </div>
         <div class="col-md-6">
             <div class="card m-2">
                 <div class="card-title mb-2">
-                    <p>Username: {{user.login}}</p>
-                    <p>Followers: {{user.followers}}</p>
-                    <p>Followering:{{user.following}}</p>
-                    <p>Repo_number:{{user.public_repos}}</p>
+                    <p appStrikethrough>Username: {{user.login}}</p>
+                    <p appStrikethrough>Followers: {{user.followers}}</p>
+                    <p appStrikethrough>Followering:{{user.following}}</p>
+                    <p appStrikethrough>Repo_number:{{user.public_repos}}</p>
                 </div>
             </div>
         </div>

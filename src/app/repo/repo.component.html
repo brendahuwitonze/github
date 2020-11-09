@@ -1,14 +1,13 @@
 <div class="container">
+    <app-form (emittextsearch)="reposearch($event)"></app-form>
     <div class="row">
         <div class="col-md-6">
-            <app-form (emittextsearch)="reposearch($event)"></app-form>
-        </div>
-            <div class="col-md-6">
-                <div class="card m-2">
+            <div class="card m-2">
                 <div class="card-title">
-                 <p>{{repository.html_url}}</p> 
-                <p>{{repository.name}}</p>
-                <p>{{repository.description}}</p>
+                    <p>{{repository.html_url}}</p>
+                    <p>{{repository.name}}</p>
+                    <p>{{repository.description}}</p>
+                </div>
             </div>
         </div>
     </div>
