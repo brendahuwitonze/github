@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <app-form (emittextsearch)="usersearch($event)"></app-form>
+        <app-form (emittextsearch)="usersearch($event)"></app-form>
+        <div class="row">
+        <div class="col-md-6"> 
             <img src="{{user.avatar_url}}" alt="">
             <p class="bren">Name: {{user.name}}</p>
         </div>

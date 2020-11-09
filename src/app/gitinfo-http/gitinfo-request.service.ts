@@ -48,14 +48,14 @@ export class GitinfoRequestService {
     interface ApiResponse{
       id:number;
       name:string;
-      html_url: string;
+       html_url: string;
       description:string;
   }
   let promise = new Promise((resolve,reject)=>{
-    this.http.get<ApiResponse>('https://api.github.com/users/'+textsearch+'/repos_url"?access_token='+environment.apiKey).toPromise().then(response=>{
+    this.http.get<ApiResponse>('https://api.github.com/users/'+textsearch+'/repos?access_token='+environment.apiKey).toPromise().then(response=>{
       this.repository.id = response.id
       this.repository.name = response. name
-      this.repository.html_url=response.html_url
+     this.repository.html_url=response.html_url
       this.repository.description=response.description
 
       resolve()

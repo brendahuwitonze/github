@@ -23,7 +23,7 @@ export class RepoComponent implements OnInit {
     )
   }
   ngOnInit(): void {
-    this.repositoryService.repoRequest("html_url")
+    this.repositoryService.repoRequest("brendahuwitonze")
     this.repository = this.repositoryService.repository
   }
 }
