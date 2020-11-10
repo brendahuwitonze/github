@@ -1,14 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 body{
-    background-image: url(https://res.cloudinary.com/dk7srqvca/image/upload/v1604865481/Screenshot_from_2020-11-08_21-46-08_mkpeni.png); 
-    background-repeat: no-repeat;
+    background-image: url(https://res.cloudinary.com/dk7srqvca/image/upload/v1604865481/Screenshot_from_2020-11-08_21-46-08_mkpeni.png);
     background-size: 100% ; 
-    background-repeat: no-repeat;
-    background-position: cover;
-
-    
+    background-position: cover;   
+}
+p , h1{
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h1{
+margin-top: 50px;
+margin-right: 80px;
 }
 p{
-    font-family: 'Open Sans Condensed', sans-serif;
+    color: rgba(250, 85, 113, 0.767);
+    font-size: 18;
 }

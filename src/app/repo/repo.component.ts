@@ -8,7 +8,7 @@ import { GitinfoRequestService } from '../gitinfo-http/gitinfo-request.service';
   styleUrls: ['./repo.component.css']
 })
 export class RepoComponent implements OnInit {
-  repository: Repository;
+  repository: Repository[]
   
   constructor( private repositoryService:GitinfoRequestService) { }
   reposearch(textsearch){
@@ -23,7 +23,7 @@ export class RepoComponent implements OnInit {
     )
   }
   ngOnInit(): void {
-    this.repositoryService.repoRequest("brendahuwitonze")
+    this.repositoryService.repoRequest("")
     this.repository = this.repositoryService.repository
   }
 }

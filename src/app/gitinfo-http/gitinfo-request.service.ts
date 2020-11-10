@@ -3,16 +3,17 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Repository } from '../repository';
 import { User } from '../user';
 import { environment } from 'src/environments/environment';
+// import { url } from 'inspector';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GitinfoRequestService {
  user:User;
- repository:Repository
+ repository:Repository[]
   constructor(private http:HttpClient) { 
-    this.user=new User("","","",0,0,0,)
-    this.repository=new Repository(0,"","","")
+    this.user=new User("","","",0,0,0,new Date)
+    this.repository=[]
   }
   userRequest(textsearch:string){
     interface ApiResponse{
@@ -22,6 +23,7 @@ export class GitinfoRequestService {
       public_repos:number
       followers:number;
       following:number;
+      created_at:Date
     }
     let promise = new Promise((resolve,reject)=>{
       this.http.get<ApiResponse>('https://api.github.com/users/'+textsearch+'?access_token='+environment.apiKey).toPromise().then(response=>{
@@ -31,7 +33,7 @@ export class GitinfoRequestService {
         this.user. public_repos = response. public_repos
         this.user.followers=response.followers
         this.user.following=response.following
-
+        this.user.created_at=response.created_at
         resolve()
       },
       error=>{
@@ -52,19 +54,21 @@ export class GitinfoRequestService {
       description:string;
   }
   let promise = new Promise((resolve,reject)=>{
-    this.http.get<ApiResponse>('https://api.github.com/users/'+textsearch+'/repos?access_token='+environment.apiKey).toPromise().then(response=>{
-      this.repository.id = response.id
-      this.repository.name = response. name
-     this.repository.html_url=response.html_url
-      this.repository.description=response.description
+    this.http.get<ApiResponse[]>('https://api.github.com/users/'+textsearch+'/repos?access_token='+environment.apiKey).toPromise().then(response=>{
+      console.log(response[0].id)
+     for(let item of response){
+       let a=new Repository(item.id,item.name,item.html_url,item.description)
+       this.repository.push(a)
+     }
+    // this.repository.id = response.id
+    //   this.repository.name = response. name
+    //  this.repository.html_url=response.html_url
+    //   this.repository.description=response.description
 
       resolve()
     },
     error=>{
-     this.repository.description="error occured"
-     this.repository.name="Akan"
-  
-      reject(error);
+      console.log(error);
       
     })
   })
