@@ -8,9 +8,9 @@ export class CreatedPipe implements PipeTransform {
   transform(value: any): any{
     let year: any = new Date().getFullYear(); 
     let yearOfCreation:any = new Date(value).getFullYear();
-    let githubYear = year - yearOfCreation;
+    let git = year - yearOfCreation;
 
-    return githubYear;
+    return git;
   }
 
 }
