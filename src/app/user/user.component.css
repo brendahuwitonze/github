@@ -8,6 +8,7 @@
     width: 320px;
     padding: 20px;
     background-color: rgba(245, 241, 237, 0.377);
+    height: 250px;
   }
   .bren{
     font-size: 30px;
@@ -16,4 +17,7 @@
 
 .card-title > p{
   font-size: 18px;
+}
+p{
+  font-weight: bold;
 }
