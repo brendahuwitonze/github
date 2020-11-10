@@ -9,6 +9,7 @@ import { RepoComponent } from './repo/repo.component';
 import { FormComponent } from './form/form.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { StrikethroughDirective } from './strikethrough.directive';
+import { CreatedPipe } from './created.pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { StrikethroughDirective } from './strikethrough.directive';
     RepoComponent,
     FormComponent,
     NavbarComponent,
-    StrikethroughDirective
+    StrikethroughDirective,
+    CreatedPipe
   ],
   imports: [
     BrowserModule,
