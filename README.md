@@ -23,7 +23,7 @@ The user can also check for the repositories
 * Angular, HTML, CSS, Bootstrap.
 
   ## here is the link 
-<!-- [QUOTE](https://brendahuwitonze.github.io/quote/.)  -->
+ [github](https://brendahuwitonze.github.io/github/.) 
 
 ## License
 
